@@ -3,6 +3,15 @@
 ```bash
 git clone https://github.com/albel-t/TGBotPrint.git
 ```
+# Зависимости
+Для логирования чата:
+```bash
+pip install python-telegram-bot
+```
+Для вывода в чате сервера:
+```bash
+pip install mcrcon
+```
 # Запуск
 ### Отладка
-открыть vs code в папке с решением, установить расширения для питона, запустить "main.py"
+Открыть vs code в папке с решением, установить расширения для питона, запустить "main.py"
