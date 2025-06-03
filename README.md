@@ -12,6 +12,13 @@ pip install python-telegram-bot
 ```bash
 pip install mcrcon
 ```
+Скопировать "server.properties" в папку сервера
+```json
+enable-rcon=true
+rcon.password=$BS#4xMgaFqH@7y - пароль без ковычек
+rcon.port=25575 - порт должен совпадать с портом в коде
+```
+в зависимостях указать нужные правки
 # Запуск
 ### Отладка
 Открыть vs code в папке с решением, установить расширения для питона, запустить "main.py"

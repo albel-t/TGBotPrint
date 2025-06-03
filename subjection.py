@@ -23,3 +23,11 @@ active_chats.append(subjection["active_chats"])
 
 names["Александр"] = subjection["Александр"]
 names["ksaers"] = subjection["ksaers"]
+
+account_password = subjection["account_password"]
+debug_port = subjection["debug_port"]
+
+
+
+
+

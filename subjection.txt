@@ -5,3 +5,6 @@ active_chats Сервер(Груповуха_2.0)
 
 Александр sanity
 ksaers ksaers
+
+account_password $BS#4xMgaFqH@7y
+debug_port 25575
