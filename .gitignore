@@ -1,2 +1,3 @@
 telegram_chat_log.txt
 __pycache__
+*.bak

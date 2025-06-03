@@ -1,6 +1,7 @@
 import mcrcon
+import subjection
 
-rcon = mcrcon.MCRcon("localhost", "$BS#4xMgaFqH@7y", 25575)
+rcon = mcrcon.MCRcon("localhost", subjection.account_password, int(subjection.debug_port))
 rcon.connect()
 
 with open("telegram_chat_log.txt", "r", encoding="utf-8") as file:
