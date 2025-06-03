@@ -51,9 +51,9 @@ async def log_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             content = f"[MEDIA] {message.caption}"
         else:
             content = "[NON-TEXT CONTENT]"
-        if content[0] != ".":
+        if (content[0] != ".") and ((chat.title or 'private') in subjection.active_chats):
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            log_entry = f"[{timestamp[11:16]}] {chat.title or 'private'} | {user.first_name}: {content}\n"
+            log_entry = f"[{timestamp[11:16]}] {subjection.names[user.first_name]}: {content}\n"
 
             with open(LOG_FILE, "a", encoding="utf-8") as f:
                 f.write(log_entry)
