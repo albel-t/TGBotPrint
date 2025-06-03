@@ -1,5 +1,6 @@
 import asyncio
 import window
+import subjection
 import random
 from telegram import Update
 from telegram.ext import (
@@ -20,8 +21,8 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-TOKEN = "7809421116:AAEJ2D6BHkNzrCt1W2ZUW_bPFSiDYewaoN8"  # Ваш токен
-LOG_FILE = "telegram_chat_log.txt"
+TOKEN = subjection.bot_token  # Ваш токен
+LOG_FILE = subjection.log_file_name
 
 def ensure_log_file():
     """Создает файл лога при первом запуске"""

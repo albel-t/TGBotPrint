@@ -1,0 +1,2 @@
+_bot_token 7809421116:AAEJ2D6BHkNzrCt1W2ZUW_bPFSiDYewaoN8
+_log_file_name telegram_chat_log.txt
