@@ -21,7 +21,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 TOKEN = "7809421116:AAEJ2D6BHkNzrCt1W2ZUW_bPFSiDYewaoN8"  # Ваш токен
-LOG_FILE = "telegram_chat_log" + str(random.randint(0, 1000000)) + ".txt"
+LOG_FILE = "telegram_chat_log.txt"
 
 def ensure_log_file():
     """Создает файл лога при первом запуске"""
