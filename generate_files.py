@@ -5,7 +5,7 @@ path = [
     ['server.properties', 
         ["enable-rcon=true",
         "rcon.password="+subjection.account_password,
-        "rcon.port"+subjection.debug_port]]
+        "rcon.port="+subjection.debug_port]]
     
     
     ]
