@@ -1,5 +1,6 @@
 import asyncio
 import window
+import short_test
 import subjection
 import random
 from telegram import Update
