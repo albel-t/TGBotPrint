@@ -161,13 +161,11 @@ def run_bot():
 
 def main():
     # Создаем и запускаем поток с ботом
-    bot_thread = threading.Thread(target=run_bot, daemon=True)
-    bot_thread.start()
+    run_bot()
     
     # Здесь можно добавить другой код, который будет выполняться параллельно с ботом
     
     # Ждем завершения потока с ботом (если нужно)
-    bot_thread.join()
 
 if __name__ == "__main__":
     main()
