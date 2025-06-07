@@ -1,5 +1,5 @@
 import subjection
-import window
+import debug
 
 path = [
     ['server.properties', 
@@ -17,5 +17,5 @@ for i in range(0, len(path)):
     print(f"{i}: {path[i][0]}")
 path_id = int(input())
 with open(path[path_id][0], 'w', encoding='utf-8') as file:
-    file.writelines(line + '\n' for line in path[path_id][1])  # Автоматический перенос строк
-window.PrintLogOut(f"Файл {path[path_id][0]} создан!")
+    file.writelines(line + '\n' for line in path[path_id][1]) 
+debug.PrintLogOut(f"Файл {path[path_id][0]} создан!")
