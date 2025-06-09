@@ -1,5 +1,6 @@
 import mcrcon
 import subjection
+import threading
 from PyQt6.QtWidgets import (QApplication, QMainWindow, QLabel, QVBoxLayout, 
                             QWidget, QPushButton, QScrollArea, QSpacerItem,
                             QSizePolicy)
@@ -163,6 +164,8 @@ from PyQt6.QtCore import Qt, QPoint, QTimer, QThread, pyqtSignal
 from PyQt6.QtGui import QColor, QPainter, QPen, QBrush
 import os
 
+from multiprocessing import Process
+
 # Ваши импорты (замените на реальные)
 import mcrcon
 import subjection
@@ -323,15 +326,29 @@ class WindowThread(QThread):
         self.window.show()
         print("[Поток] Окно создано")
 
+
+
+class MyThread():
+    def __init__(self, app):
+        print("__init__")
+        self.app = app
+
+    def run(self):
+        print("run")
+        self.app.exec()
+
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    # Запускаем окно в отдельном потоке
-    thread = WindowThread()
-    thread.start()
-    app.exec()
+    thread = MyThread(app)
+    p1 = Process(target=thread.run, args=(thread,), daemon=True)
+    p1.start()
+    
     # Основной код выполняется сразу после запуска потока
     print("Привет, консоль! Основной код работает параллельно с окном.")
+    p1.join()
     i = 1
     while i < 2:
         print("Работаю...")
